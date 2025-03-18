@@ -169,7 +169,7 @@ function App() {
                   <img
                     src={"/assets/profile-0-bg.png"}
                     alt="profile"
-                    className="object-bottom object-cover size-full"
+                    className="object-[40%_50%] sm:object-bottom object-cover size-full"
                   />
                 </div>
               </div>
