@@ -146,6 +146,31 @@ function App() {
             </div>
           </div>
         </aside>
+        <aside className="fixed left-1/2 bottom-4 -translate-x-1/2 z-50">
+          <div className="flex lg:hidden items-center justify-center h-16 w-64 bg-white shadow-md border border-gray-100 rounded-full gap-3">
+            <a href="mailto:derangga1011@gmail.com">
+              <div className="p-2 rounded-lg hover:bg-gray-200">
+                <MailIcon />
+              </div>
+            </a>
+            <div
+              className="p-2 rounded-lg hover:bg-gray-200 hover:cursor-pointer"
+              onClick={() => {
+                window.open("https://www.linkedin.com/in/derangga/");
+              }}
+            >
+              <LinkedinIcon />
+            </div>
+            <div
+              className="p-2 rounded-lg hover:bg-gray-200 hover:cursor-pointer"
+              onClick={() => {
+                window.open("https://github.com/derangga");
+              }}
+            >
+              <GithubIcon />
+            </div>
+          </div>
+        </aside>
         <div className="flex flex-col overflow-scroll">
           <section className="w-screen bg-slate-50" id="about" ref={aboutRef}>
             <div className="min-h-[30rem] max-w-3xl lg:max-w-2/3 grid grid-cols-2 sm:grid-cols-3 mx-auto lg:gap-12">
@@ -233,7 +258,7 @@ function App() {
         </div>
       </main>
       <footer className="bg-slate-700 w-screen">
-        <div className="max-w-3xl lg:max-w-2/3 mx-auto py-8 px-4 text-white font-poppins">
+        <div className="max-w-3xl lg:max-w-2/3 mx-auto py-24 lg:py-8 px-4 text-white font-poppins">
           Copyright © {year} Dimas Rangga
         </div>
       </footer>
