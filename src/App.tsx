@@ -175,13 +175,13 @@ function App() {
           <section className="w-screen bg-slate-50" id="about" ref={aboutRef}>
             <div className="min-h-[30rem] max-w-3xl lg:max-w-2/3 grid grid-cols-2 sm:grid-cols-3 mx-auto lg:gap-12">
               <div className="sm:col-span-2 flex flex-col h-full justify-center w-full px-6 py-2 lg:px-0 lg:py-0">
-                <h2 className="text-3xl font-poppins">
+                <h2 className="text-3xl font-poppins dark:text-black">
                   {"I'm"} <strong>Fullstack Engineer</strong>
                 </h2>
-                <h2 className="text-4xl font-poppins font-semibold">
+                <h2 className="text-4xl font-poppins font-semibold dark:text-black">
                   Dimas Rangga
                 </h2>
-                <p className="sm:text-xl font-poppins mt-4">
+                <p className="sm:text-xl font-poppins mt-4 dark:text-black">
                   A Software Engineer with over 4 years of expertise in
                   designing and building applications used by more than 800,000
                   users. My primary focus has been on delivering
