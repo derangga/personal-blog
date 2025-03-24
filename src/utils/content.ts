@@ -120,6 +120,24 @@ export const project: ProjectCardProps[] = [
       );
     },
   },
+  {
+    name: "The Movie App",
+    image: "/assets/the-movie.webp",
+    description:
+      "A native android app that built with jetpack library with architechture MVVM",
+    onclick: () => {
+      window.open("https://github.com/derangga/themovie-kotlin", "_blank");
+    },
+  },
+  {
+    name: "Foodpedia",
+    image: "/assets/foodpedia-web-app.webp",
+    description:
+      "A web app food recipe that user can share recipe and ask AI to give food recipe suggestion",
+    onclick: () => {
+      window.open("https://foodpedia-orcin.vercel.app/", "_blank");
+    },
+  },
 ];
 
 export const blog = [
