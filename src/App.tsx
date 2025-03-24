@@ -124,7 +124,7 @@ function App() {
         <aside className="fixed left-4 top-1/2 -translate-y-1/2 z-50">
           <div className="hidden lg:flex flex-col items-center justify-center w-16 h-64 bg-white shadow-md border border-gray-100 rounded-full gap-3">
             <a href="mailto:derangga1011@gmail.com">
-              <div className="p-2 rounded-lg hover:bg-gray-200">
+              <div className="p-2 rounded-lg hover:bg-gray-200 dark:text-black">
                 <MailIcon />
               </div>
             </a>
@@ -149,7 +149,7 @@ function App() {
         <aside className="fixed left-1/2 bottom-4 -translate-x-1/2 z-50">
           <div className="flex lg:hidden items-center justify-center h-16 w-64 bg-white shadow-md border border-gray-100 rounded-full gap-3">
             <a href="mailto:derangga1011@gmail.com">
-              <div className="p-2 rounded-lg hover:bg-gray-200">
+              <div className="p-2 rounded-lg hover:bg-gray-200 dark:text-black">
                 <MailIcon />
               </div>
             </a>
@@ -236,10 +236,12 @@ function App() {
             <div className="flex flex-col max-w-3xl lg:max-w-2/3 mx-auto py-8 px-4 lg:px-0">
               <div className="flex flex-row items-center gap-6">
                 <MediumIcon />
-                <h2 className="text-3xl font-poppins font-semibold">Blog</h2>
+                <h2 className="text-3xl font-poppins font-semibold dark:text-black">
+                  Blog
+                </h2>
                 <div className="grow"></div>
                 <div
-                  className="font-poppins font-semibold py-1 px-2 hover:cursor-pointer"
+                  className="font-poppins dark:text-black font-semibold py-1 px-2 hover:cursor-pointer"
                   onClick={() => {
                     window.open("https://medium.com/@derangga");
                   }}
