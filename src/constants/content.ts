@@ -1,5 +1,20 @@
-import { ProjectCardProps } from "../components/ProjectCard";
-import { WorkExperienceProps } from "../components/WorkExperienceItem";
+import { ProjectProps } from "@/components/project-item";
+import { WorkExperienceProps } from "@/components/work-experience-item";
+
+export const navLinks = [
+  {
+    path: "/",
+    name: "About",
+  },
+  {
+    path: "/experience",
+    name: "Experience",
+  },
+  {
+    path: "/projects",
+    name: "Projects",
+  },
+];
 
 export const workExperience: WorkExperienceProps[] = [
   {
@@ -42,7 +57,7 @@ export const workExperience: WorkExperienceProps[] = [
     company: "PT Nostra Solusi Teknologi",
     startDate: "September 2020",
     endDate: "April 2021",
-    companyTextColor: "text-lime-700",
+    companyTextColor: "text-lime-700 dark:text-lime-300",
     role: "Android Engineer",
     companyDescription: `Nostratech is a technology consulting company with expertise 
               in building digital products and systems`,
@@ -71,12 +86,13 @@ export const workExperience: WorkExperienceProps[] = [
   },
 ];
 
-export const project: ProjectCardProps[] = [
+export const projects: ProjectProps[] = [
   {
     name: "Bukalapak Marketplace",
     image: "/assets/bukalapak-mp.webp",
     description: `An online platform that helps SMEs start their own business with 
         minimum capital and greater market exposure across the country!`,
+    stack: ["Android", "Kotlin", "Java"],
     onclick: () => {
       window.open(
         "https://play.google.com/store/apps/details?id=com.bukalapak.android&hl=en",
@@ -89,6 +105,19 @@ export const project: ProjectCardProps[] = [
     image: "/assets/bukalapak-mitra.webp",
     description: `An online service that provides individual shops or agents with access 
         to better distributors and diversifies their business offerings with a variety of virtual products.`,
+    stack: [
+      "Android",
+      "Kotlin",
+      "Java",
+      "Golang",
+      "Vuejs",
+      "Javascript",
+      "Typescript",
+      "Ruby",
+      "MongoDB",
+      "PostgresSQL",
+      "MySQL",
+    ],
     onclick: () => {
       window.open(
         "https://play.google.com/store/apps/details?id=com.bukalapak.mitra&hl=en",
@@ -101,6 +130,7 @@ export const project: ProjectCardProps[] = [
     image: "/assets/riliv-app.webp",
     description: `An online mental health counseling to help people who are struggling with
         personal problems`,
+    stack: ["Android", "Kotlin", "Java"],
     onclick: () => {
       window.open(
         "https://play.google.com/store/apps/details?id=nozero.apps1&hl=en",
@@ -113,6 +143,7 @@ export const project: ProjectCardProps[] = [
     image: "/assets/amartha.webp",
     description: `Amartha is a micro-finance to connect rural micro-enterprises run by strong women
         with affordable capital access.`,
+    stack: ["Android", "Kotlin", "Java"],
     onclick: () => {
       window.open(
         "https://play.google.com/store/apps/details?id=com.amartha.investor&hl=en",
@@ -125,6 +156,7 @@ export const project: ProjectCardProps[] = [
     image: "/assets/the-movie.webp",
     description:
       "A native android app that built with jetpack library with architechture MVVM",
+    stack: ["Android", "Kotlin", "Jetpack"],
     onclick: () => {
       window.open("https://github.com/derangga/themovie-kotlin", "_blank");
     },
@@ -134,17 +166,9 @@ export const project: ProjectCardProps[] = [
     image: "/assets/foodpedia-web-app.webp",
     description:
       "A web app food recipe that user can share recipe and ask AI to give food recipe suggestion",
+    stack: ["Typescript", "Nextjs", "PostgresSQL", "Tailwind CSS"],
     onclick: () => {
       window.open("https://foodpedia-orcin.vercel.app/", "_blank");
     },
   },
-];
-
-export const blog = [
-  "https://derangga.medium.com/upgrade-target-sdk-android-strategy-1bec32677bd5",
-  "https://derangga.medium.com/kiwi-flutter-ioc-container-6bc1c60aa4ef",
-  "https://derangga.medium.com/flutter-clean-architecture-bloc-streams-89fc2c9146f",
-  "https://derangga.medium.com/room-for-local-storage-in-android-apps-542462e9864d",
-  "https://derangga.medium.com/authenticate-phone-number-dengan-firebase-981b929e32b8",
-  "https://derangga.medium.com/push-notification-menggunakan-fcm-firebase-cloud-messaging-9d2a69a43c3c",
 ];
