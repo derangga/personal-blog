@@ -13,6 +13,8 @@
   --ring: oklch(0% 0 0);
   --overlay: oklch(0% 0 0 / 0.8);
   --shadow: 2px 2px 0px 0px var(--border);
+  --microlink-background-color: var(--secondary-background);
+  --microlink-color: (--main);
 }
 
 .dark {
@@ -24,6 +26,10 @@
   --border: oklch(0% 0 0);
   --ring: oklch(100% 0 0);
   --shadow: 2px 2px 0px 0px var(--border);
+  --microlink-background-color: var(--secondary-background);
+  --microlink-color: (--main);
+  --microlink-hover-background-color: var(--secondary-background);
+  --microlink-hover-border-color: #ffffff;
   @apply text-white;
 }
 
