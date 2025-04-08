@@ -23,6 +23,22 @@ const jersey10 = Jersey_10({
 export const metadata: Metadata = {
   title: "Dimas Rangga",
   description: "Personal website",
+  openGraph: {
+    type: "website",
+    title: "Dimas Rangga - Software Engineer",
+    description:
+      "Based in Indonesia, I'm a Software Engineer. I'm passionate about android, web technologies, and building cool stuff.",
+    url: "https://derangga-web.vercel.app/",
+    siteName: "Dimas Rangga",
+    images: [
+      {
+        url: "https://ronitjadhav.github.io/ronit.io/ronit.png",
+        width: 1200,
+        height: 630,
+        alt: "Ronit Jadhav",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

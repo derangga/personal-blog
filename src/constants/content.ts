@@ -1,5 +1,6 @@
 import { ProjectProps } from "@/components/project-item";
 import { WorkExperienceProps } from "@/components/work-experience-item";
+import { assetLocalPath } from "./image-path";
 
 export const navLinks = [
   {
@@ -22,7 +23,7 @@ export const navLinks = [
 
 export const workExperience: WorkExperienceProps[] = [
   {
-    companyLogo: "/assets/logo-bukalapak.svg",
+    companyLogo: `${assetLocalPath}/assets/logo-bukalapak.svg`,
     company: "Bukalapak",
     companyUrl: "https://www.bukalapak.com/",
     startDate: "May 2021",
@@ -55,7 +56,7 @@ export const workExperience: WorkExperienceProps[] = [
     ],
   },
   {
-    companyLogo: "/assets/nostra-logo.png",
+    companyLogo: `${assetLocalPath}/assets/nostra-logo.png`,
     companyUrl: "https://nostratech.com/",
     logoScale: "scale-100",
     company: "PT Nostra Solusi Teknologi",
@@ -93,7 +94,7 @@ export const workExperience: WorkExperienceProps[] = [
 export const projects: ProjectProps[] = [
   {
     name: "Bukalapak Marketplace",
-    image: "/assets/bukalapak-mp.webp",
+    image: `${assetLocalPath}/assets/bukalapak-mp.webp`,
     description: `An online platform that helps SMEs start their own business with 
         minimum capital and greater market exposure across the country!`,
     stack: ["Android", "Kotlin", "Java"],
@@ -106,7 +107,7 @@ export const projects: ProjectProps[] = [
   },
   {
     name: "Mitra Bukalapak",
-    image: "/assets/bukalapak-mitra.webp",
+    image: `${assetLocalPath}/assets/bukalapak-mitra.webp`,
     description: `An online service that provides individual shops or agents with access 
         to better distributors and diversifies their business offerings with a variety of virtual products.`,
     stack: [
@@ -131,7 +132,7 @@ export const projects: ProjectProps[] = [
   },
   {
     name: "Riliv App",
-    image: "/assets/riliv-app.webp",
+    image: `${assetLocalPath}/assets/riliv-app.webp`,
     description: `An online mental health counseling to help people who are struggling with
         personal problems`,
     stack: ["Android", "Kotlin", "Java"],
@@ -144,7 +145,7 @@ export const projects: ProjectProps[] = [
   },
   {
     name: "Amartha Investor App",
-    image: "/assets/amartha.webp",
+    image: `${assetLocalPath}/assets/amartha.webp`,
     description: `Amartha is a micro-finance to connect rural micro-enterprises run by strong women
         with affordable capital access.`,
     stack: ["Android", "Kotlin", "Java"],
@@ -157,7 +158,7 @@ export const projects: ProjectProps[] = [
   },
   {
     name: "The Movie App",
-    image: "/assets/the-movie.webp",
+    image: `${assetLocalPath}/assets/the-movie.webp`,
     description:
       "A native android app that built with jetpack library with architechture MVVM",
     stack: ["Android", "Kotlin", "Jetpack"],
@@ -167,7 +168,7 @@ export const projects: ProjectProps[] = [
   },
   {
     name: "Foodpedia",
-    image: "/assets/foodpedia-web-app.webp",
+    image: `${assetLocalPath}/assets/foodpedia-web-app.webp`,
     description:
       "A web app food recipe that user can share recipe and ask AI to give food recipe suggestion",
     stack: ["Typescript", "Nextjs", "PostgresSQL", "Tailwind CSS"],
