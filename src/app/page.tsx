@@ -30,16 +30,13 @@ export default function Home() {
                 </p>
               </div>
               <div className="mt-10 flex justify-center space-x-5 lg:justify-start">
-                <a href="https://github.com/rcortiz" target="_blank">
+                <a href="mailto:derangga1011@gmail.com" target="_blank">
                   <Mail className="opacity-60 hover:opacity-100" />
                 </a>
-                <a href="https://codepen.io/rcortiz" target="_blank">
+                <a href="https://github.com/derangga" target="_blank">
                   <GithubIcon className="opacity-60 hover:opacity-100" />
                 </a>
-                <a
-                  href="https://www.linkedin.com/in/ralphortiz/"
-                  target="_blank"
-                >
+                <a href="https://www.linkedin.com/in/derangga/" target="_blank">
                   <LinkedinIcon className="opacity-60 hover:opacity-100" />
                 </a>
               </div>
