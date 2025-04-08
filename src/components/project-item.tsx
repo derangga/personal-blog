@@ -11,7 +11,10 @@ export interface ProjectProps {
 
 const ProjectItem = (props: ProjectProps) => {
   return (
-    <Card className="font-jersey bg-secondary-background gap-3 hover:scale-105 transform transition-transform">
+    <Card
+      className="font-jersey bg-secondary-background gap-3 hover:cursor-pointer hover:scale-105 transform transition-transform"
+      onClick={props.onclick}
+    >
       <CardHeader>
         <div className="relative overflow-hidden rounded-lg border">
           <Image
