@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
     "@microlink/react": "^5.5.23",
     "@radix-ui/react-slot": "^1.1.2",
     "class-variance-authority": "^0.7.1",

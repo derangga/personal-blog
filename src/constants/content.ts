@@ -14,6 +14,10 @@ export const navLinks = [
     path: "/projects",
     name: "Projects",
   },
+  {
+    path: "/blog",
+    name: "Blog",
+  },
 ];
 
 export const workExperience: WorkExperienceProps[] = [
@@ -171,4 +175,13 @@ export const projects: ProjectProps[] = [
       window.open("https://foodpedia-orcin.vercel.app/", "_blank");
     },
   },
+];
+
+export const blog = [
+  "https://derangga.medium.com/upgrade-target-sdk-android-strategy-1bec32677bd5",
+  "https://derangga.medium.com/kiwi-flutter-ioc-container-6bc1c60aa4ef",
+  "https://derangga.medium.com/flutter-clean-architecture-bloc-streams-89fc2c9146f",
+  "https://derangga.medium.com/room-for-local-storage-in-android-apps-542462e9864d",
+  "https://derangga.medium.com/authenticate-phone-number-dengan-firebase-981b929e32b8",
+  "https://derangga.medium.com/push-notification-menggunakan-fcm-firebase-cloud-messaging-9d2a69a43c3c",
 ];

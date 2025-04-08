@@ -9,7 +9,7 @@ const AnimatedName = () => {
     if (!el.current) return;
 
     const typed = new Typed(el.current, {
-      strings: ["Hello!", "Hola!", "Bonjour!"],
+      strings: ["Hola!", "Bonjour!", "こんにちは!", "Hello!"],
       typeSpeed: 50,
     });
 

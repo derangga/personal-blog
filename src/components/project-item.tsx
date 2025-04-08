@@ -13,7 +13,7 @@ const ProjectItem = (props: ProjectProps) => {
   return (
     <Card className="font-jersey bg-secondary-background gap-3 hover:scale-105 transform transition-transform">
       <CardHeader>
-        <div className="relative overflow-hidden rounded-lg">
+        <div className="relative overflow-hidden rounded-lg border">
           <Image
             src={props.image}
             alt={props.name}

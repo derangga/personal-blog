@@ -3,6 +3,7 @@ declare module "@microlink/react" {
 
   interface MicrolinkProps {
     url: string;
+    size?: string;
     direction?: string;
     className?: string;
   }
