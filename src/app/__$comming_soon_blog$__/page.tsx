@@ -103,9 +103,7 @@ const categories = [
   "All",
   "Frontend",
   "Backend",
-  "React",
-  "TypeScript",
-  "CSS",
+  "Android",
   "Industry Insights",
 ];
 
@@ -284,25 +282,6 @@ export default function BlogPage() {
           </p>
         </div>
       )}
-
-      {/* Newsletter Signup */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="mt-20 bg-card p-8 rounded-lg text-center max-w-xl mx-auto"
-      >
-        <h3 className="text-2xl font-bold mb-4">Subscribe to the Newsletter</h3>
-        <p className="text-muted-foreground mb-6">
-          Get notified when I publish new articles and receive exclusive content
-          straight to your inbox.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-2">
-          <Input placeholder="Your email address" className="flex-grow" />
-          <Button>Subscribe</Button>
-        </div>
-      </motion.div>
     </div>
   );
 }

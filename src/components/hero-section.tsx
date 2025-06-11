@@ -6,6 +6,12 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 export function HeroSection() {
+  const handleClickScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section className="relative py-12 md:py-24 lg:py-32 flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] overflow-hidden">
       {/* Background Elements */}
@@ -43,16 +49,13 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-col sm:flex-row gap-4 mt-6"
+            className="flex flex-col sm:flex-row gap-4 mt-2"
           >
             <Link href="/projects">
               <Button className="group">
                 View my work
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
-            </Link>
-            <Link href="/about">
-              <Button variant="outline">About me</Button>
             </Link>
           </motion.div>
         </div>
@@ -63,12 +66,15 @@ export function HeroSection() {
         transition={{ delay: 1, duration: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
-        <Link href="#about-preview">
-          <Button variant="ghost" size="icon" className="animate-bounce">
-            <ChevronDown className="h-6 w-6" />
-            <span className="sr-only">Scroll down</span>
-          </Button>
-        </Link>
+        <Button
+          variant="ghost"
+          size="icon"
+          className="animate-bounce"
+          onClick={() => handleClickScroll("about-preview")}
+        >
+          <ChevronDown className="h-6 w-6" />
+          <span className="sr-only">Scroll down</span>
+        </Button>
       </motion.div>
     </section>
   );

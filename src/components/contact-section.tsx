@@ -1,12 +1,11 @@
-"use client"
+"use client";
 
-import { z } from "zod"
-import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { motion } from "framer-motion"
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { motion } from "framer-motion";
 import {
   Form,
   FormControl,
@@ -14,43 +13,48 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
-import { SectionHeading } from "@/components/section-heading"
-import { Send } from "lucide-react"
-
-const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  email: z.string().email({ message: "Please enter a valid email address." }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
-})
-
-type FormValues = z.infer<typeof formSchema>
+} from "@/components/ui/form";
+import { SectionHeading } from "@/components/section-heading";
+import { Loader2, Send } from "lucide-react";
+import { mailFormSchema, MailFormValues } from "@/models/mail-form";
+import sendMail from "@/actions/mail";
+import { toast } from "sonner";
+import { useState } from "react";
 
 export function ContactSection() {
-  const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema),
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const form = useForm<MailFormValues>({
+    resolver: zodResolver(mailFormSchema),
     defaultValues: {
       name: "",
       email: "",
       message: "",
     },
-  })
+  });
 
-  function onSubmit(data: FormValues) {
-    console.log(data)
-    // In a real application, you would send this data to your server
-    alert("Message sent successfully!")
-    form.reset()
+  async function onSubmit(data: MailFormValues) {
+    setIsLoading(true);
+    const result = await sendMail(data);
+    setIsLoading(false);
+    if (!result) {
+      toast.error("Failed sending email", {
+        description:
+          "Something wrong with your request, please try again later",
+        duration: 2000,
+      });
+      return;
+    }
+    form.reset();
   }
 
   return (
     <section className="py-20">
-      <SectionHeading 
-        title="Get in Touch" 
+      <SectionHeading
+        title="Get in Touch"
         description="Have a project in mind? Let's work together."
       />
       <div className="container mx-auto px-4">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -92,13 +96,18 @@ export function ContactSection() {
                   <FormItem>
                     <FormLabel>Message</FormLabel>
                     <FormControl>
-                      <Textarea placeholder="Your message" rows={5} {...field} />
+                      <Textarea
+                        placeholder="Your message"
+                        rows={5}
+                        {...field}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
-              <Button type="submit" className="w-full">
+              <Button type="submit" className="w-full" disabled={isLoading}>
+                {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                 Send Message
                 <Send className="ml-2 h-4 w-4" />
               </Button>
@@ -107,5 +116,5 @@ export function ContactSection() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

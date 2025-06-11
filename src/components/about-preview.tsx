@@ -1,33 +1,52 @@
 "use client";
 
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/section-heading";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 
 const techStack = [
   {
-    name: "React",
+    name: "Android",
+    color: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+  },
+  {
+    name: "Go",
     color: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
   },
   {
-    name: "Next.js",
-    color: "bg-black text-white dark:bg-zinc-800 dark:text-zinc-200",
+    name: "Kotlin",
+    color:
+      "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300",
+  },
+  {
+    name: "Java",
+    color: "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300",
   },
   {
     name: "TypeScript",
     color: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
   },
   {
-    name: "Node.js",
-    color: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+    name: "JavaScript",
+    color: "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300",
   },
   {
-    name: "Express",
-    color: "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300",
+    name: "React",
+    color: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+  },
+  {
+    name: "Tailwind CSS",
+    color: "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300",
+  },
+  {
+    name: "Next.js",
+    color: "bg-black text-white dark:bg-zinc-800 dark:text-zinc-200",
+  },
+
+  {
+    name: "Node.js",
+    color: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
   },
   {
     name: "MongoDB",
@@ -36,28 +55,6 @@ const techStack = [
   {
     name: "PostgreSQL",
     color: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-  },
-  {
-    name: "Tailwind CSS",
-    color: "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300",
-  },
-  {
-    name: "Redux",
-    color:
-      "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-  },
-  {
-    name: "GraphQL",
-    color: "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300",
-  },
-  {
-    name: "Docker",
-    color: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-  },
-  {
-    name: "AWS",
-    color:
-      "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300",
   },
 ];
 
@@ -116,10 +113,14 @@ export function AboutPreview() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-muted-foreground mb-6"
             >
-              With over 5 years of experience in web development, I specialize
-              in creating responsive, user-friendly applications with modern
-              JavaScript frameworks. {"I'm"} passionate about clean code, user
-              experience, and staying on top of the latest technologies.
+              Experienced Software Engineer with expertise in designing and
+              building applications used by more than 800,000 users. My primary
+              focus has been on delivering high-performance, user-friendly
+              mobile solutions that meet both user needs and business
+              objectives. I enjoy learning new technologies and applying them to
+              create full-stack solutions. Currently, {"I’m"} exploring
+              full-stack development with Next.js by building a mini project to
+              deepen my understanding of modern web frameworks.
             </motion.p>
             <motion.div
               variants={container}
@@ -141,19 +142,6 @@ export function AboutPreview() {
                   </motion.div>
                 ))}
               </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <Link href="/about">
-                <Button variant="outline" className="group">
-                  Learn more about me
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </Link>
             </motion.div>
           </div>
         </div>

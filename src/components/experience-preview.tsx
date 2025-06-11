@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/section-heading";
 import Link from "next/link";
-import { ArrowRight, Briefcase, CalendarDays } from "lucide-react";
+import { ArrowRight, CalendarDays } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -12,25 +12,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { motion } from "framer-motion";
-
-const experiences = [
-  {
-    id: 1,
-    role: "Senior Frontend Developer",
-    company: "Tech Innovators Inc.",
-    period: "2022 - Present",
-    description:
-      "Leading the frontend development team, implementing modern UI/UX practices and mentoring junior developers.",
-  },
-  {
-    id: 2,
-    role: "Full-Stack Developer",
-    company: "Digital Solutions Ltd.",
-    period: "2020 - 2022",
-    description:
-      "Developed and maintained web applications using React, Node.js, and MongoDB. Improved application performance by 40%.",
-  },
-];
+import Image from "next/image";
+import { experiencesHome } from "@/constants/content";
 
 export function ExperiencePreview() {
   return (
@@ -41,7 +24,7 @@ export function ExperiencePreview() {
       />
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
-          {experiences.map((exp, index) => (
+          {experiencesHome.map((exp, index) => (
             <motion.div
               key={exp.id}
               initial={{ opacity: 0, y: 50 }}
@@ -53,7 +36,13 @@ export function ExperiencePreview() {
               <Card>
                 <CardHeader className="flex flex-row items-start space-y-0 gap-4">
                   <div className="mt-1 bg-primary/10 p-2 rounded-md">
-                    <Briefcase className="h-5 w-5 text-primary" />
+                    <Image
+                      src={exp.companyLogo}
+                      width={30}
+                      height={30}
+                      style={{ objectFit: "contain" }}
+                      alt={exp.company}
+                    />
                   </div>
                   <div className="space-y-1">
                     <CardTitle className="text-xl">{exp.role}</CardTitle>

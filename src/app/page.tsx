@@ -2,8 +2,6 @@ import { HeroSection } from "@/components/hero-section";
 import { AboutPreview } from "@/components/about-preview";
 import { ExperiencePreview } from "@/components/experience-preview";
 import { ProjectsPreview } from "@/components/projects-preview";
-import { BlogPreview } from "@/components/blog-preview";
-import { ContactSection } from "@/components/contact-section";
 
 export default function Home() {
   return (
@@ -12,8 +10,6 @@ export default function Home() {
       <AboutPreview />
       <ExperiencePreview />
       <ProjectsPreview />
-      <BlogPreview />
-      <ContactSection />
     </div>
   );
 }

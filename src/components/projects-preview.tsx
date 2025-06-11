@@ -13,33 +13,7 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
-
-const projects = [
-  {
-    id: 1,
-    title: "E-Commerce Platform",
-    description:
-      "A full-featured online shopping platform with user authentication and payment processing",
-    image: "https://images.pexels.com/photos/6956903/pexels-photo-6956903.jpeg",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-  },
-  {
-    id: 2,
-    title: "Task Management App",
-    description:
-      "A collaborative task management tool with real-time updates and team functionality",
-    image: "https://images.pexels.com/photos/5483071/pexels-photo-5483071.jpeg",
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Socket.io"],
-  },
-  {
-    id: 3,
-    title: "Travel Companion",
-    description:
-      "A travel planning application with itinerary creation and location-based recommendations",
-    image: "https://images.pexels.com/photos/7412095/pexels-photo-7412095.jpeg",
-    technologies: ["React Native", "Firebase", "Google Maps API", "Redux"],
-  },
-];
+import { projectsHome } from "@/constants/content";
 
 export function ProjectsPreview() {
   const container = {
@@ -71,9 +45,9 @@ export function ProjectsPreview() {
           viewport={{ once: true }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {projects.map((project) => (
+          {projectsHome.map((project) => (
             <motion.div key={project.id} variants={item}>
-              <Card className="h-full flex flex-col overflow-hidden hover:shadow-lg transition-shadow">
+              <Card className="h-full flex flex-col overflow-hidden hover:shadow-lg transition-shadow pt-0 pb-6">
                 <div className="relative h-48 w-full">
                   <Image
                     src={project.image}
@@ -98,10 +72,12 @@ export function ProjectsPreview() {
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Button variant="ghost" className="group w-full">
-                    View project
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </Button>
+                  <Link href={project.project} className="w-full">
+                    <Button variant="ghost" className="group w-full">
+                      View project
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </Button>
+                  </Link>
                 </CardFooter>
               </Card>
             </motion.div>

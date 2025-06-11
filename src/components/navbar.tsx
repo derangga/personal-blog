@@ -24,10 +24,8 @@ import { motion } from "framer-motion";
 
 const routes = [
   { path: "/", label: "Home" },
-  { path: "/about", label: "About" },
   { path: "/experience", label: "Experience" },
   { path: "/projects", label: "Projects" },
-  { path: "/blog", label: "Blog" },
 ];
 
 export function Navbar() {
@@ -42,7 +40,7 @@ export function Navbar() {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6">
         <Link href="/" className="flex items-center space-x-2">
-          <span className="text-xl font-bold">Portfolio</span>
+          <span className="text-xl font-bold">DR</span>
         </Link>
 
         {/* Desktop Navigation */}
