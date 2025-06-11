@@ -3,7 +3,6 @@
 import { SectionHeading } from "@/components/section-heading";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import {
   Card,
   CardContent,
