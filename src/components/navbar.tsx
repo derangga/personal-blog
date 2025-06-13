@@ -26,6 +26,7 @@ const routes = [
   { path: "/", label: "Home" },
   { path: "/experience", label: "Experience" },
   { path: "/projects", label: "Projects" },
+  { path: "/blog", label: "Blog" },
 ];
 
 export function Navbar() {

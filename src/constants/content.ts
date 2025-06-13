@@ -141,11 +141,156 @@ export const experiences = [
   },
 ];
 
-export const blog = [
-  "https://derangga.medium.com/upgrade-target-sdk-android-strategy-1bec32677bd5",
-  "https://derangga.medium.com/kiwi-flutter-ioc-container-6bc1c60aa4ef",
-  "https://derangga.medium.com/flutter-clean-architecture-bloc-streams-89fc2c9146f",
-  "https://derangga.medium.com/room-for-local-storage-in-android-apps-542462e9864d",
-  "https://derangga.medium.com/authenticate-phone-number-dengan-firebase-981b929e32b8",
-  "https://derangga.medium.com/push-notification-menggunakan-fcm-firebase-cloud-messaging-9d2a69a43c3c",
+export const projects = [
+  {
+    id: 1,
+    title: "Bukalapak Marketplace",
+    description: `An online platform that helps SMEs start their own business with 
+        minimum capital and greater market exposure across the country!`,
+    image: "/assets/bukalapak-mp.webp",
+    technologies: ["Android", "Kotlin", "Java", "Firebase"],
+    demoUrl:
+      "https://play.google.com/store/apps/details?id=com.bukalapak.android&hl=en",
+    githubUrl: "",
+    category: "Mobile",
+  },
+  {
+    id: 2,
+    title: "Mitra Bukalapak",
+    description: `An online service that provides individual shops or agents with access 
+        to better distributors and diversifies their business offerings with a variety of virtual products.`,
+    image: "/assets/bukalapak-mitra.webp",
+    technologies: [
+      "Android",
+      "Kotlin",
+      "Java",
+      "Golang",
+      "Vuejs",
+      "Javascript",
+      "Typescript",
+      "Ruby",
+      "MongoDB",
+      "PostgresSQL",
+      "MySQL",
+    ],
+    demoUrl:
+      "https://play.google.com/store/apps/details?id=com.bukalapak.mitra&hl=en",
+    githubUrl: "",
+    category: "Full-Stack",
+  },
+  {
+    id: 3,
+    title: "Cartula",
+    description: `An online health consultation / online telemedicine application that has a consultation feature 
+      with a doctor via voice call and video call.`,
+    image: "/assets/riliv-app.webp",
+    technologies: ["Android", "Kotlin", "Firebase"],
+    demoUrl: "https://youtu.be/wjzhpUutyfo?si=rNsVedJI2Cfv0C9d",
+    githubUrl: "",
+    category: "Mobile",
+  },
+  {
+    id: 4,
+    title: "Riliv",
+    description:
+      "An online mental health counseling to help people who are struggling with personal problems",
+    image: "/assets/riliv-app.webp",
+    technologies: ["Android", "Kotlin", "Java", "Firebase"],
+    demoUrl: "https://play.google.com/store/apps/details?id=nozero.apps1&hl=en",
+    githubUrl: "",
+    category: "Mobile",
+  },
+  {
+    id: 5,
+    title: "Amartha Investor",
+    description: `Amartha is a micro-finance to connect rural micro-enterprises run by strong women
+        with affordable capital access.`,
+    image: "/assets/amartha.webp",
+    technologies: ["Android", "Kotlin", "SQLite"],
+    demoUrl:
+      "https://play.google.com/store/apps/details?id=com.amartha.investor&hl=en",
+    githubUrl: "",
+    category: "Mobile",
+  },
+  {
+    id: 6,
+    title: "Foodpedia",
+    description:
+      "A web app food recipe that user can share recipe and ask AI to give food recipe suggestion",
+    image: "/assets/foodpedia.webp",
+    technologies: ["Typescript", "Nextjs", "PostgresSQL", "Tailwind CSS", "AI"],
+    demoUrl: "https://foodpedia-orcin.vercel.app/",
+    githubUrl: "https://github.com/derangga/foodpedia",
+    category: "Full-Stack",
+  },
+  {
+    id: 7,
+    title: "The Movie App",
+    description:
+      "A native android app that built with jetpack library with architechture MVVM",
+    image: "/assets/the-movie.webp",
+    technologies: ["Android", "Kotlin", "SQLite", "Jetpack"],
+    demoUrl: "",
+    githubUrl: "https://github.com/derangga/themovie-kotlin",
+    category: "Mobile",
+  },
+];
+
+export const blogPosts = [
+  {
+    id: 1,
+    title: "Building REST API from Scratch",
+    category: "Backend",
+    url: "https://medium.com/@derangga/building-rest-api-from-scratch-c97273986344",
+    featured: true,
+  },
+  {
+    id: 2,
+    title: "Upgrade Target SDK Android Strategy",
+    category: "Android",
+    url: "https://derangga.medium.com/upgrade-target-sdk-android-strategy-1bec32677bd5",
+    featured: true,
+  },
+  {
+    id: 3,
+    title: "Flutter — Data Layer Testing (Dio & Moor)",
+    category: "Flutter",
+    url: "https://medium.com/@derangga/flutter-data-layer-testing-dio-moor-a4693b5ea3af",
+    featured: false,
+  },
+  {
+    id: 4,
+    title: "Kiwi — Flutter IoC Container",
+    category: "Flutter",
+    url: "https://derangga.medium.com/kiwi-flutter-ioc-container-6bc1c60aa4ef",
+    featured: false,
+  },
+  {
+    id: 5,
+    title: "Flutter Clean Architecture — BloC Streams",
+    category: "Flutter",
+    url: "https://derangga.medium.com/flutter-clean-architecture-bloc-streams-89fc2c9146f",
+    featured: false,
+  },
+  {
+    id: 6,
+    title: "Room for Local Storage in Android Apps",
+    category: "Android",
+    url: "https://derangga.medium.com/room-for-local-storage-in-android-apps-542462e9864d",
+    featured: false,
+  },
+  {
+    id: 7,
+    title: "Authenticate Phone Number dengan Firebase",
+    category: "Android",
+    url: "https://derangga.medium.com/authenticate-phone-number-dengan-firebase-981b929e32b8",
+    featured: false,
+  },
+  {
+    id: 8,
+    title: "Membedah Modus Penipuan Undangan Pernikahan .apk",
+    category: "Others",
+    url: "https://medium.com/@derangga/membedah-modus-penipuan-undangan-pernikahan-apk-900150fc7d12",
+    featured: false,
+  },
 ];

@@ -4,7 +4,6 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-
   --radius-sm: calc(var(--radius) - 4px);
 
   --radius-md: calc(var(--radius) - 2px);
@@ -131,18 +130,17 @@
 }
 
 :root {
-
   --radius: 0.5rem;
 
-  --background: oklch(1.0000 0 0);
+  --background: oklch(1 0 0);
 
   --foreground: oklch(0.1448 0 0);
 
-  --card: oklch(1.0000 0 0);
+  --card: oklch(1 0 0);
 
   --card-foreground: oklch(0.1448 0 0);
 
-  --popover: oklch(1.0000 0 0);
+  --popover: oklch(1 0 0);
 
   --popover-foreground: oklch(0.1448 0 0);
 
@@ -176,7 +174,7 @@
 
   --chart-3: oklch(0.5036 0.0685 227.7614);
 
-  --chart-4: oklch(0.8496 0.1439 79.6700);
+  --chart-4: oklch(0.8496 0.1439 79.67);
 
   --chart-5: oklch(0.7747 0.1497 52.7735);
 
@@ -184,7 +182,7 @@
 
   --sidebar-foreground: oklch(0.5452 0 0);
 
-  --sidebar-primary: oklch(0.8348 0.1302 160.9080);
+  --sidebar-primary: oklch(0.8348 0.1302 160.908);
 
   --sidebar-primary-foreground: oklch(0.2626 0.0147 166.4589);
 
@@ -194,7 +192,7 @@
 
   --sidebar-border: oklch(0.9037 0 0);
 
-  --sidebar-ring: oklch(0.8348 0.1302 160.9080);
+  --sidebar-ring: oklch(0.8348 0.1302 160.908);
 
   --destructive-foreground: oklch(0.9851 0 0);
 
@@ -224,23 +222,29 @@
 
   --shadow-xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.09);
 
-  --shadow-sm: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 1px 2px -1px hsl(0 0% 0% / 0.17);
+  --shadow-sm: 0px 1px 3px 0px hsl(0 0% 0% / 0.17),
+    0px 1px 2px -1px hsl(0 0% 0% / 0.17);
 
-  --shadow: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 1px 2px -1px hsl(0 0% 0% / 0.17);
+  --shadow: 0px 1px 3px 0px hsl(0 0% 0% / 0.17),
+    0px 1px 2px -1px hsl(0 0% 0% / 0.17);
 
-  --shadow-md: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 2px 4px -1px hsl(0 0% 0% / 0.17);
+  --shadow-md: 0px 1px 3px 0px hsl(0 0% 0% / 0.17),
+    0px 2px 4px -1px hsl(0 0% 0% / 0.17);
 
-  --shadow-lg: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 4px 6px -1px hsl(0 0% 0% / 0.17);
+  --shadow-lg: 0px 1px 3px 0px hsl(0 0% 0% / 0.17),
+    0px 4px 6px -1px hsl(0 0% 0% / 0.17);
 
-  --shadow-xl: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 8px 10px -1px hsl(0 0% 0% / 0.17);
+  --shadow-xl: 0px 1px 3px 0px hsl(0 0% 0% / 0.17),
+    0px 8px 10px -1px hsl(0 0% 0% / 0.17);
 
   --shadow-2xl: 0px 1px 3px 0px hsl(0 0% 0% / 0.43);
 
   --tracking-normal: 0.025em;
+
+  --microlink-background-color: oklch(1 0 0);
 }
 
 .dark {
-
   --background: oklch(0.1448 0 0);
 
   --foreground: oklch(0.9851 0 0);
@@ -277,7 +281,7 @@
 
   --ring: oklch(0.8699 0 0);
 
-  --chart-1: oklch(0.6304 0.1800 259.9560);
+  --chart-1: oklch(0.6304 0.18 259.956);
 
   --chart-2: oklch(0.6475 0.1603 148.4955);
 
@@ -285,7 +289,7 @@
 
   --chart-4: oklch(0.5812 0.2986 307.0272);
 
-  --chart-5: oklch(0.6720 0.2281 5.7267);
+  --chart-5: oklch(0.672 0.2281 5.7267);
 
   --sidebar: oklch(0.1822 0 0);
 
@@ -301,7 +305,7 @@
 
   --sidebar-border: oklch(0.2809 0 0);
 
-  --sidebar-ring: oklch(0.8003 0.1821 151.7110);
+  --sidebar-ring: oklch(0.8003 0.1821 151.711);
 
   --destructive-foreground: oklch(0.9851 0 0);
 
@@ -333,17 +337,30 @@
 
   --shadow-xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.09);
 
-  --shadow-sm: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 1px 2px -1px hsl(0 0% 0% / 0.17);
+  --shadow-sm: 0px 1px 3px 0px hsl(0 0% 0% / 0.17),
+    0px 1px 2px -1px hsl(0 0% 0% / 0.17);
 
-  --shadow: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 1px 2px -1px hsl(0 0% 0% / 0.17);
+  --shadow: 0px 1px 3px 0px hsl(0 0% 0% / 0.17),
+    0px 1px 2px -1px hsl(0 0% 0% / 0.17);
 
-  --shadow-md: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 2px 4px -1px hsl(0 0% 0% / 0.17);
+  --shadow-md: 0px 1px 3px 0px hsl(0 0% 0% / 0.17),
+    0px 2px 4px -1px hsl(0 0% 0% / 0.17);
 
-  --shadow-lg: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 4px 6px -1px hsl(0 0% 0% / 0.17);
+  --shadow-lg: 0px 1px 3px 0px hsl(0 0% 0% / 0.17),
+    0px 4px 6px -1px hsl(0 0% 0% / 0.17);
 
-  --shadow-xl: 0px 1px 3px 0px hsl(0 0% 0% / 0.17), 0px 8px 10px -1px hsl(0 0% 0% / 0.17);
+  --shadow-xl: 0px 1px 3px 0px hsl(0 0% 0% / 0.17),
+    0px 8px 10px -1px hsl(0 0% 0% / 0.17);
 
   --shadow-2xl: 0px 1px 3px 0px hsl(0 0% 0% / 0.43);
+
+  --microlink-background-color: oklch(0.1448 0 0);
+
+  --microlink-color: oklch(0.9851 0 0);
+
+  --microlink-hover-background-color: oklch(0.2686 0 0);
+
+  --microlink-border-color: oklch(0.2686 0 0);
 }
 
 @layer base {

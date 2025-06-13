@@ -16,7 +16,6 @@ export default function ExperiencePage() {
 
       {/* Timeline */}
       <div className="relative max-w-4xl mx-auto mt-16">
-        {/* Timeline line */}
         <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-border" />
 
         {experiences.map((exp, index) => (
