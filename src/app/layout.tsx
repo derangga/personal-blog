@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     siteName: "Dimas Rangga",
     images: [
       {
-        url: "https://pbs.twimg.com/media/Gn_7TmwbQAAfnLo?format=jpg",
-        width: 1200,
-        height: 630,
+        url: "https://pbs.twimg.com/media/GtSzegabMAA3YZ4?format=jpg&name=medium",
+        width: 400,
+        height: 400,
         alt: "Dimas Rangga",
       },
     ],
@@ -46,7 +46,9 @@ export const metadata: Metadata = {
     title: "Dimas Rangga",
     description:
       "Based in Indonesia, I'm a Software Engineer. I'm passionate about android, web technologies, and building cool stuff.",
-    images: ["https://pbs.twimg.com/media/Gn_7TmwbQAAfnLo?format=jpg"],
+    images: [
+      "https://pbs.twimg.com/media/GtSzegabMAA3YZ4?format=jpg&name=medium",
+    ],
   },
 };
 
