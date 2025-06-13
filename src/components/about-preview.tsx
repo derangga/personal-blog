@@ -104,7 +104,7 @@ export function AboutPreview() {
               transition={{ duration: 0.5 }}
               className="text-2xl font-bold mb-4"
             >
-              Full-Stack Developer based in San Francisco
+              Software Engineer based in Indonesia
             </motion.h3>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
