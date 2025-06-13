@@ -16,7 +16,7 @@ import { useState } from "react";
 import { GithubIcon } from "@/components/icons/github-icon";
 import { projects } from "@/constants/content";
 
-const categories = ["All", "Full-Stack", "Mobile", "Frontend"];
+const categories = ["All", "Full-Stack", "Mobile", "Backend", "Frontend"];
 
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -39,6 +39,10 @@ export default function ProjectsPage() {
   const item = {
     hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
+  const openWindow = (url: string) => {
+    window.open(url, "_blank");
   };
 
   return (
@@ -113,6 +117,7 @@ export default function ProjectsPage() {
                   size="sm"
                   className="flex-1"
                   disabled={project.demoUrl === ""}
+                  onClick={() => openWindow(project.demoUrl)}
                 >
                   <ExternalLink className="mr-2 h-4 w-4" />
                   Demo
@@ -122,6 +127,7 @@ export default function ProjectsPage() {
                   variant="outline"
                   className="flex-1"
                   disabled={project.githubUrl === ""}
+                  onClick={() => openWindow(project.githubUrl)}
                 >
                   <GithubIcon className="mr-2 h-4 w-4" />
                   Code
