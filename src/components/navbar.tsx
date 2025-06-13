@@ -19,6 +19,7 @@ import {
   SheetContent,
   SheetTrigger,
   SheetTitle,
+  SheetHeader,
 } from "@/components/ui/sheet";
 import { motion } from "framer-motion";
 
@@ -78,14 +79,16 @@ export function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
-              <SheetTitle>Navigation Menu</SheetTitle>
-              <nav className="flex flex-col gap-4 mt-8">
+              <SheetHeader>
+                <SheetTitle>Menu</SheetTitle>
+              </SheetHeader>
+              <nav className="flex flex-col gap-4 px-4">
                 {routes.map((route) => (
                   <Link
                     key={route.path}
                     href={route.path}
                     className={cn(
-                      "px-2 py-1 text-lg hover:text-primary transition-colors",
+                      "py-1 text-lg hover:text-primary transition-colors flex flex-row gap-4",
                       pathname === route.path && "text-primary font-medium"
                     )}
                   >
